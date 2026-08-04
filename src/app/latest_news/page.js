@@ -73,7 +73,7 @@ export default function AboutContactPage() {
         </div>
 
         <div className="mt-6 lg:mt-8 flex justify-center">
-          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none">
             <Image
               src="/latest_news/tcfd_presentation_poster.jpg"
               alt="TCFD永續財務資訊揭露智慧判讀系統發表會海報"

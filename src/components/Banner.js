@@ -45,7 +45,7 @@ export default function Banner({ images }) {
               alt={`Banner image ${index + 1}`}
               fill
               priority={index === 0}
-              className="object-cover"
+              className={`object-cover ${src.includes('tcfd_presentation_poster') ? 'object-top' : 'object-center'}`}
             />
           </div>
         ))}

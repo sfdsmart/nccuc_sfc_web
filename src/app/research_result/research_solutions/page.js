@@ -12,10 +12,7 @@ export default function ResearchSolutionsPage() {
           永續財務資訊揭露智慧判讀系統 
         </h1>
 
-        <p
-          className="leading-relaxed lg:leading-8 text-gray-700 text-justify text-base lg:text-lg mb-3"
-          style={{ fontFamily: "'KaiTi', '標楷體', serif" }}
-        >
+        <p className="text-sm sm:text-base lg:text-lg text-emerald-700 font-semibold tracking-wider uppercase mb-6 lg:mb-8 pb-2 border-b border-emerald-100">
           Sustainable Finance Reporting Evaluation
         </p>
 
@@ -24,10 +21,10 @@ export default function ResearchSolutionsPage() {
           <Image
             src="/research_solutions/sustainFRE LOGO.png"
             alt="永續財務資訊揭露智慧判讀系統"
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{ width: "80%", height: "380px" }}
+            width={4036}
+            height={1091}
+            sizes="(max-width: 768px) 90vw, 700px"
+            className="w-full max-w-md sm:max-w-xl lg:max-w-2xl h-auto"
           />
         </div>
 
@@ -40,20 +37,32 @@ export default function ResearchSolutionsPage() {
         </h2>
 
         <p
-          className="leading-relaxed lg:leading-8 text-gray-700 text-justify text-base lg:text-lg mb-3"
+          className="leading-relaxed lg:leading-8 text-gray-700 text-justify text-base lg:text-lg mb-4"
           style={{ fontFamily: "'KaiTi', '標楷體', serif" }}
         >
-          中心依據近年研究經驗，使用AI開發-永續財務資訊揭露智慧判讀系統(Sustainable Finance Reporting Evaluation)。此系統彌補現有工具在永續資訊判讀上的缺口、解決現行技術於中文永續資訊判讀上之語意落差與文化適配不足問題。本系統可協助及應用在：
+          SustainFRE由商學院永續財務決策研究中心團隊開發，本系統使用 AI
+          模型、客觀地進行量化與質化分析企業的永續相關資訊。協助使用者能快速辨識其符合及不符合國際揭露標準之處。本系統可協助及應用在：
         </p>
 
         <ol
-          className="list-decimal list-outside pl-10 space-y-2 leading-relaxed lg:leading-8 text-gray-700 text-base lg:text-lg mb-8"
+          className="space-y-3 mb-8"
           style={{ fontFamily: "'KaiTi', '標楷體', serif" }}
         >
-          <li>上市櫃公司對其永續財務資訊揭露的自我評量。</li>
-          <li>永續顧問服務業對企業揭露資訊進行第三方確信。</li>
-          <li>金融機構及資本市場投資人對上市櫃公司的永續評價與授信、投資決定。</li>
-          <li>作為資料庫或永續評比(公司)判讀使用。</li>
+          {[
+            '上市櫃公司對其永續財務資訊揭露的自我評量。',
+            '提升企業輔導、報告審閱及品質管理效率。',
+            '永續顧問服務業提升企業輔導、報告審閱及品質管理效率。',
+            '第三方確認機構提升報告及一致性審閱結果。',
+            '金融機構及資本市場投資人對上市櫃公司的永續評價與授信、投資決定。',
+            '作為資料庫或永續評比(公司)判讀使用。',
+          ].map((text, i) => (
+            <li key={i} className="flex gap-3 leading-relaxed lg:leading-8 text-gray-700 text-base lg:text-lg">
+              <span className="flex-none flex items-center justify-center w-6 h-6 lg:w-7 lg:h-7 rounded-full bg-emerald-600 text-white text-xs lg:text-sm font-semibold mt-0.5">
+                {i + 1}
+              </span>
+              <span className="text-justify">{text}</span>
+            </li>
+          ))}
         </ol>
 
         {/* 第二張圖 
