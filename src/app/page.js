@@ -8,8 +8,8 @@ export default function Home() {
     file.endsWith('.jpg') || file.endsWith('.png') || file.endsWith('.jpeg') || file.endsWith('.gif')
   );
   files.sort((a, b) => {
-    const aFirst = a.includes('tcfd_presentation_poster');
-    const bFirst = b.includes('tcfd_presentation_poster');
+    const aFirst = a.includes('tcfd_banner');
+    const bFirst = b.includes('tcfd_banner');
     if (aFirst && !bFirst) return -1;
     if (!aFirst && bFirst) return 1;
     return a.localeCompare(b);

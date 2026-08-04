@@ -25,7 +25,7 @@ export default function Banner({ images }) {
   };
 
   return (
-    <div className="w-full relative h-[320px] sm:h-[420px] md:h-[520px] overflow-hidden">
+    <div className="w-full relative h-[320px] sm:h-[420px] md:h-[520px] xl:h-[580px] 2xl:h-[640px] overflow-hidden">
       <div
         className="flex h-full"
         style={{
@@ -35,11 +35,11 @@ export default function Banner({ images }) {
         }}
       >
         {images.map((src, index) => {
-          const isPoster = src.includes('tcfd_presentation_poster');
+          const isPoster = src.includes('tcfd_banner');
           return (
             <div
               key={index}
-              className={`h-full shrink-0 relative ${isPoster ? 'bg-[#eef3ea]' : ''}`}
+              className="h-full shrink-0 relative"
               style={{ width: `${100 / images.length}%` }}
             >
               <Image
@@ -47,7 +47,7 @@ export default function Banner({ images }) {
                 alt={`Banner image ${index + 1}`}
                 fill
                 priority={index === 0}
-                className={isPoster ? 'object-contain' : 'object-cover object-center'}
+                className={`object-cover ${isPoster ? 'object-top' : 'object-center'}`}
               />
             </div>
           );
@@ -88,7 +88,7 @@ export default function Banner({ images }) {
       </div>
 
       {/* 標題（pointer-events-none 讓點擊穿透到下方箭頭/點點）— 海報本身已含文字，切到該張時不疊加標題 */}
-      {!images[currentIndex].includes('tcfd_presentation_poster') && (
+      {!images[currentIndex].includes('tcfd_banner') && (
         <div className="absolute inset-0 flex items-center justify-center bg-black/30 z-10 pointer-events-none">
           <h1
             // 手機版 text-2xl，平板 md:text-4xl，電腦版 lg:text-5xl，並加入 text-center 置中與 leading-normal 行距
