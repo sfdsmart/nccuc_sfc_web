@@ -34,21 +34,24 @@ export default function Banner({ images }) {
           transition: 'transform 0.3s ease'
         }}
       >
-        {images.map((src, index) => (
-          <div
-            key={index}
-            className="h-full shrink-0 relative"
-            style={{ width: `${100 / images.length}%` }}
-          >
-            <Image
-              src={src}
-              alt={`Banner image ${index + 1}`}
-              fill
-              priority={index === 0}
-              className={`object-cover ${src.includes('tcfd_presentation_poster') ? 'object-top' : 'object-center'}`}
-            />
-          </div>
-        ))}
+        {images.map((src, index) => {
+          const isPoster = src.includes('tcfd_presentation_poster');
+          return (
+            <div
+              key={index}
+              className={`h-full shrink-0 relative ${isPoster ? 'bg-[#eef3ea]' : ''}`}
+              style={{ width: `${100 / images.length}%` }}
+            >
+              <Image
+                src={src}
+                alt={`Banner image ${index + 1}`}
+                fill
+                priority={index === 0}
+                className={isPoster ? 'object-contain' : 'object-cover object-center'}
+              />
+            </div>
+          );
+        })}
       </div>
 
       {/* 箭頭 */}
@@ -84,16 +87,18 @@ export default function Banner({ images }) {
         ))}
       </div>
 
-      {/* 標題（pointer-events-none 讓點擊穿透到下方箭頭/點點） */}
-      <div className="absolute inset-0 flex items-center justify-center bg-black/30 z-10 pointer-events-none">
-        <h1
-          // 手機版 text-2xl，平板 md:text-4xl，電腦版 lg:text-5xl，並加入 text-center 置中與 leading-normal 行距
-          className="text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center leading-normal md:leading-relaxed"
-          style={{ fontFamily: "'KaiTi', '標楷體', serif" }}
-        >
-          國立政治大學商學院永續財務決策研究中心
-        </h1>
-      </div>
+      {/* 標題（pointer-events-none 讓點擊穿透到下方箭頭/點點）— 海報本身已含文字，切到該張時不疊加標題 */}
+      {!images[currentIndex].includes('tcfd_presentation_poster') && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black/30 z-10 pointer-events-none">
+          <h1
+            // 手機版 text-2xl，平板 md:text-4xl，電腦版 lg:text-5xl，並加入 text-center 置中與 leading-normal 行距
+            className="text-2xl md:text-4xl lg:text-5xl font-bold text-white text-center leading-normal md:leading-relaxed"
+            style={{ fontFamily: "'KaiTi', '標楷體', serif" }}
+          >
+            國立政治大學商學院永續財務決策研究中心
+          </h1>
+        </div>
+      )}
     </div>
   );
 }

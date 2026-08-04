@@ -57,7 +57,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b-2 border-gray-200 relative">
-      <div className="w-full px-4 lg:px-16 py-4 lg:py-6 flex justify-between items-center bg-white relative z-20">
+      <div className="w-full max-w-6xl mx-auto px-4 lg:px-8 py-4 lg:py-6 flex justify-between items-center bg-white relative z-20">
         {/* 左側：Logo 和文字 */}
         <div className="flex items-center lg:gap-6">
           <div className="flex items-center justify-center shrink-0">
