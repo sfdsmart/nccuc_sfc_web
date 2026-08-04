@@ -12,10 +12,17 @@ export default function ResearchSolutionsPage() {
           永續財務資訊揭露智慧判讀系統 
         </h1>
 
+        <p
+          className="leading-relaxed lg:leading-8 text-gray-700 text-justify text-base lg:text-lg mb-3"
+          style={{ fontFamily: "'KaiTi', '標楷體', serif" }}
+        >
+          Sustainable Finance Reporting Evaluation
+        </p>
+
         {/* 第一張圖 */}
         <div className="w-full mb-8 flex justify-center">
           <Image
-            src="/research_solutions/banner.png"
+            src="/research_solutions/sustainFRE LOGO.png"
             alt="永續財務資訊揭露智慧判讀系統"
             width={0}
             height={0}
