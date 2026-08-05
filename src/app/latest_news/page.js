@@ -79,7 +79,8 @@ export default function AboutContactPage() {
               alt="TCFD永續財務資訊揭露智慧判讀系統發表會海報"
               width={3179}
               height={4494}
-              sizes="(max-width: 768px) 90vw, 500px"
+              sizes="(max-width: 640px) 320px, (max-width: 768px) 384px, (max-width: 1024px) 448px, 900px"
+              quality={90}
               className="w-full h-auto rounded-lg shadow-md border border-gray-100"
             />
           </div>
