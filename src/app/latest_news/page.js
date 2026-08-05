@@ -8,7 +8,7 @@ export default function AboutContactPage() {
           className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4 lg:mb-6"
           style={{ fontFamily: "'KaiTi', '標楷體', serif" }}
         >
-          相關活動
+          會議活動
         </h1>
 
         <div

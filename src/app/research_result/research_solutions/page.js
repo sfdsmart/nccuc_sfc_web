@@ -6,13 +6,13 @@ export default function ResearchSolutionsPage() {
       <section className="w-full max-w-5xl">
 
         <h1
-          className="text-2xl lg:text-3xl font-bold text-gray-800 mb-3 lg:mb-6"
+          className="text-2xl lg:text-3xl font-bold text-gray-800 mb-3 lg:mb-6 text-center"
           style={{ fontFamily: "'KaiTi', '標楷體', serif" }}
         >
-          永續財務資訊揭露智慧判讀系統 
+          永續財務資訊揭露智慧判讀系統
         </h1>
 
-        <p className="text-sm sm:text-base lg:text-lg text-emerald-700 font-semibold tracking-wider uppercase mb-6 lg:mb-8 pb-2 border-b border-emerald-100">
+        <p className="text-sm sm:text-base lg:text-lg text-emerald-700 font-semibold tracking-wider uppercase mb-6 lg:mb-8 pb-2 border-b border-emerald-100 text-center">
           Sustainable Finance Reporting Evaluation
         </p>
 
