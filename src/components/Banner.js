@@ -42,6 +42,16 @@ export default function Banner({ images }) {
               className="h-full shrink-0 relative bg-black"
               style={{ width: `${100 / images.length}%` }}
             >
+              {isPoster && (
+        // 背景：模糊放大版的同一張圖，填滿容器但不影響前景清晰度
+                <Image
+                  src={src}
+                  alt=""
+                  fill
+                  className="object-cover blur-xl scale-110 opacity-50"
+                  aria-hidden="true"
+                />
+              )}
               <Image
                 src={src}
                 alt={`Banner image ${index + 1}`}
