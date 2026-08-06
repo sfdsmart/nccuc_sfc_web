@@ -39,15 +39,27 @@ export default function Banner({ images }) {
           return (
             <div
               key={index}
-              className="h-full shrink-0 relative"
+              className="h-full shrink-0 relative overflow-hidden"
               style={{ width: `${100 / images.length}%` }}
             >
+              {/* 海報是直式圖片，容器是寬扁形，比例會隨視窗寬高比變動而不同，
+                  用 object-cover 會依當下比例裁掉不定的下半部；改用模糊放大的
+                  背景鋪滿 + object-contain 完整顯示海報，確保任何視窗比例都不會被裁切 */}
+              {isPoster && (
+                <Image
+                  src={src}
+                  alt=""
+                  aria-hidden="true"
+                  fill
+                  className="object-cover object-center scale-110 blur-2xl opacity-60"
+                />
+              )}
               <Image
                 src={src}
                 alt={`Banner image ${index + 1}`}
                 fill
                 priority={index === 0}
-                className={`object-cover ${isPoster ? 'object-top' : 'object-center'}`}
+                className={isPoster ? 'object-contain' : 'object-cover object-center'}
               />
             </div>
           );
