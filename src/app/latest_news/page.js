@@ -1,5 +1,27 @@
 import Image from "next/image";
 
+const eventNews = [
+  {
+    date: "2026/09/17",
+    source: "天下雜誌",
+    title: "永續財務資訊揭露智慧判讀系統SustainFRE 發表會相關報導",
+    href: "https://www.cw.com.tw/article/5142939",
+  },
+  {
+    date: "2026/09/14",
+    source: "經濟日報",
+    title: "政大SustainFRE亮相 AI助攻永續財務決策",
+    href: "https://money.udn.com/money/story/5723/9753215",
+  },
+  {
+    date: "2026/09/11",
+    source: "政大企業永續管理研究中心",
+    title:
+      "政大商學院領航綠色金融科技新里程，發表「永續財務資訊揭露智慧判讀系統」SustainFRE",
+    href: "https://cbs.nccu.edu.tw/zh-tw/news/zheng-da-shang-xue-yuan-ling-hanglse-jin-rong-ke-ji-xin-li-cheng-fa-biao-yong-xu-cai-wu-zi-xun-jie-lu-zhi-hui-pan-du-xi-tong-sustainfre",
+  },
+];
+
 export default function AboutContactPage() {
   return (
     <main className="flex flex-col items-center justify-start px-6 lg:px-16 py-8 lg:py-12">
@@ -8,8 +30,44 @@ export default function AboutContactPage() {
           className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4 lg:mb-6"
           style={{ fontFamily: "'KaiTi', '標楷體', serif" }}
         >
+          活動新聞
+        </h1>
+
+        <ul className="space-y-3 lg:space-y-4 mb-10 lg:mb-14">
+          {eventNews.map((news) => (
+            <li key={news.href}>
+              <a
+                href={news.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 rounded-lg border border-gray-200 bg-white px-4 py-3 lg:px-5 lg:py-4 shadow-sm transition-colors hover:border-emerald-300 hover:bg-emerald-50"
+              >
+                <span
+                  className="shrink-0 text-sm lg:text-base font-semibold text-emerald-700 sm:w-28"
+                  style={{ fontFamily: "'Times New Roman', Times, serif" }}
+                >
+                  {news.date}
+                </span>
+                <span className="flex-1 text-gray-800 text-base lg:text-lg" style={{ fontFamily: "'KaiTi', '標楷體', serif" }}>
+                  {news.title}
+                </span>
+                <span className="shrink-0 text-xs lg:text-sm text-gray-500 whitespace-nowrap">
+                  {news.source}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <h1
+          className="text-2xl lg:text-3xl font-bold text-gray-800 mb-1"
+          style={{ fontFamily: "'KaiTi', '標楷體', serif" }}
+        >
           會議活動
         </h1>
+        <p className="text-sm lg:text-base text-gray-500 mb-4 lg:mb-6">
+          發佈日期：2026/08/04
+        </p>
 
         <div
           className="space-y-4 lg:space-y-5 leading-relaxed lg:leading-8 text-gray-700 text-base lg:text-lg"
