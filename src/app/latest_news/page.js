@@ -22,6 +22,13 @@ const eventNews = [
 
 const meetingEvents = [
   {
+    date: "2026/09/29",
+    source: "本中心",
+    title:
+      "0911 SustainFRE 系統發表會，現場回饋問卷：免費一次永續報告書判讀服務公告",
+    href: "/latest_news/sustainfre-feedback",
+  },
+  {
     date: "2026/08/04",
     source: "本中心",
     title: "永續財務資訊揭露智慧判讀系統-SustainFRE 發表會",
