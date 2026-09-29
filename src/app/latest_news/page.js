@@ -2,7 +2,7 @@ const eventNews = [
   {
     date: "2026/09/17",
     source: "天下雜誌",
-    title: "永續財務資訊揭露智慧判讀系統SustainFRE 發表會相關報導",
+    title: "永續報告書愈寫愈厚，誰能協助看懂報告?政大用AI破解「資訊焦慮」。",
     href: "https://www.cw.com.tw/article/5142939",
   },
   {
