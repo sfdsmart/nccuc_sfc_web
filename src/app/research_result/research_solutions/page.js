@@ -1,4 +1,14 @@
 import Image from "next/image";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "SustainFRE 永續財務資訊揭露智慧判讀系統",
+  description:
+    "SustainFRE（Sustainable Finance Reporting Evaluation）是政大永續財務決策研究中心（SFC）開發的 AI 永續報告書判讀系統，協助企業、金融機構與投資人評估 ESG 永續資訊揭露品質。",
+  path: "/research_result/research_solutions",
+  keywords: ["SustainFRE", "永續報告書判讀", "AI", "ESG", "永續資訊揭露"],
+});
+
 
 export default function ResearchSolutionsPage() {
   return (

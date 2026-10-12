@@ -1,3 +1,13 @@
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "主任介紹",
+  description:
+    "政大永續財務決策研究中心（SFC）主任陳嬿如教授，政大財務管理學系教授、EMBA執行長，專長公司理財、企業併購與企業永續、永續金融研究。",
+  path: "/about/director",
+  keywords: ["陳嬿如", "主任", "永續金融", "財務管理"],
+});
+
 export default function AboutDirectorPage() {
   return (
     <main className="flex flex-col items-center justify-start px-6 lg:px-16 py-8 lg:py-12">

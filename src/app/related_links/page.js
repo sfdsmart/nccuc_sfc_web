@@ -1,5 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "永續財務相關連結",
+  description:
+    "政大永續財務決策研究中心（SFC）整理永續財務與 ESG 相關連結，包括金管會、證券櫃檯買賣中心、IFRS 永續揭露準則等資源。",
+  path: "/related_links",
+  keywords: ["相關連結", "金管會", "ESG", "IFRS"],
+});
+
 
 const linksData = [
   { label: "ESG接軌IFRS永續揭露準則", href: "https://isds.tpex.org.tw/IFRS/front/#/main/home", logo: "/logos/esg.jpg" },

@@ -1,3 +1,13 @@
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "中心介紹",
+  description:
+    "政大商學院永續財務決策研究中心（SFC）成立於2023年，聚焦永續財務、永續金融、ESG、氣候風險與永續資訊揭露研究，提供政策建議並培育永續金融人才。",
+  path: "/about/center",
+  keywords: ["中心介紹", "永續財務", "永續金融", "ESG"],
+});
+
 export default function AboutCenterPage() {
   return (
     <main className="flex flex-col items-center justify-start px-6 lg:px-16 py-8 lg:py-12">

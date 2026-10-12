@@ -1,5 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "SustainFRE 永續財務資訊揭露智慧判讀系統發表會",
+  description:
+    "政大永續財務決策研究中心（SFC）舉辦「永續財務資訊揭露智慧判讀系統 SustainFRE」發表會，以 AI 協助企業、金融機構與投資人判讀永續報告書與 ESG 資訊。",
+  path: "/latest_news/sustainfre-launch",
+  keywords: ["SustainFRE", "發表會", "永續報告書判讀", "AI", "ESG"],
+});
+
 
 export default function SustainFreLaunchEventPage() {
   return (

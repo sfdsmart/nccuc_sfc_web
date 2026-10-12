@@ -1,3 +1,13 @@
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "團隊介紹",
+  description:
+    "政大永續財務決策研究中心（SFC）中心主管及顧問群，匯聚政大商學院跨系所教師，投入永續財務、ESG 與永續資訊揭露研究。",
+  path: "/about/team",
+  keywords: ["研究團隊", "顧問群", "永續財務", "ESG"],
+});
+
 export default function AboutTeamPage() {
   return (
     <main className="flex flex-col items-center justify-start px-6 lg:px-16 py-8 lg:py-12">

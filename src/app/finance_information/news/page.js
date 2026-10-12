@@ -1,3 +1,13 @@
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "永續新知",
+  description:
+    "政大永續財務決策研究中心（SFC）整理永續新知：永續金融、ESG、氣候風險、淨零轉型與永續資訊揭露的國內外最新趨勢。",
+  path: "/finance_information/news",
+  keywords: ["永續新知", "永續金融", "ESG", "淨零轉型"],
+});
+
 export default function AboutContactPage() {
   return (
     <main className="flex flex-col items-center justify-start px-6 lg:px-16 py-8 lg:py-12">

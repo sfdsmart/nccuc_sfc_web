@@ -1,4 +1,14 @@
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "免費一次永續報告書判讀服務公告",
+  description:
+    "SustainFRE 系統發表會現場回饋問卷：政大永續財務決策研究中心（SFC）提供填答單位免費一次永續報告書 AI 判讀服務，協助檢視 ESG 永續資訊揭露。",
+  path: "/latest_news/sustainfre-feedback",
+  keywords: ["永續報告書判讀", "免費", "SustainFRE", "ESG"],
+});
+
 
 const awardees = [
   "新光人壽保險股份有限公司",

@@ -1,4 +1,14 @@
 import { thesesByYear } from './study';
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "永續財務研究",
+  description:
+    "政大永續財務決策研究中心（SFC）永續財務研究成果，涵蓋永續資訊揭露、氣候風險、ESG、永續金融與企業轉型等學術論文與研究計畫。",
+  path: "/research_result/research_studies",
+  keywords: ["永續財務研究", "學術論文", "氣候風險", "ESG"],
+});
+
 
 export default function ResearchStudiesPage() {
   return (

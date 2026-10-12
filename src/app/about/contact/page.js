@@ -1,3 +1,13 @@
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "聯絡我們",
+  description:
+    "聯絡國立政治大學商學院永續財務決策研究中心（政大永續財務中心，NCCU SFC），洽詢永續財務研究合作、ESG 與永續報告書判讀服務。",
+  path: "/about/contact",
+  keywords: ["聯絡我們", "永續報告書判讀", "合作洽詢"],
+});
+
 export default function AboutContactPage() {
   return (
     <main className="flex flex-col items-center justify-start px-6 lg:px-16 py-8 lg:py-12">

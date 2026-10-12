@@ -1,3 +1,13 @@
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "最新消息",
+  description:
+    "政大永續財務決策研究中心（SFC）最新消息與活動新聞，包含 SustainFRE 永續報告書 AI 判讀系統發表會、媒體報導與 ESG 永續財務活動資訊。",
+  path: "/latest_news",
+  keywords: ["最新消息", "活動新聞", "SustainFRE", "永續報告書"],
+});
+
 const eventNews = [
   {
     date: "2026/09/17",
