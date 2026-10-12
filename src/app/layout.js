@@ -18,11 +18,14 @@ export const metadata = {
   icons: {
     icon: "/sfc_logo.png",
   },
+  verification: {
+    google: "yBZ6scYD44P2jNBSBFe5RdULuuGy2nepj_USkH5gY8s",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="zh-Hant-TW">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
