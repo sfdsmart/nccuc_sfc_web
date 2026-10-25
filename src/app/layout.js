@@ -59,6 +59,7 @@ export const metadata = {
   },
   icons: {
     icon: "/sfc_logo.png",
+    apple: "/apple-touch-icon.png",
   },
   verification: {
     google: "yBZ6scYD44P2jNBSBFe5RdULuuGy2nepj_USkH5gY8s",
