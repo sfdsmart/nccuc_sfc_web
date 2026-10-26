@@ -14,6 +14,9 @@ const routes = [
   { path: "/finance_information/relevant_regulations", priority: 0.6, changeFrequency: "monthly" },
   { path: "/research_result/research_studies", priority: 0.8, changeFrequency: "monthly" },
   { path: "/research_result/research_solutions", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/research_result/research_solutions/financial-industry-disclosure", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/research_result/research_solutions/s2-disclosure-large-capital", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/research_result/research_solutions/semiconductor-supply-chain", priority: 0.7, changeFrequency: "monthly" },
   { path: "/related_links", priority: 0.5, changeFrequency: "yearly" },
 ];
 

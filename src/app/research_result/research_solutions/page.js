@@ -1,5 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
+import SlideGallery from "@/components/SlideGallery";
+import { introSlides, applicationStudies } from "./slides";
 
 export const metadata = pageMetadata({
   title: "SustainFRE 永續財務資訊揭露智慧判讀系統",
@@ -71,6 +74,38 @@ export default function ResearchSolutionsPage() {
                 {i + 1}
               </span>
               <span className="text-justify">{text}</span>
+            </li>
+          ))}
+        </ol>
+
+        {/* 系統介紹簡報 */}
+        <div className="mb-10 lg:mb-14">
+          <SlideGallery slides={introSlides} />
+        </div>
+
+        {/* 系統應用研究 */}
+        <h2
+          className="text-xl lg:text-xl font-bold text-gray-800 mb-3"
+          style={{ fontFamily: "'KaiTi', '標楷體', serif" }}
+        >
+          系統應用研究
+        </h2>
+
+        <ol
+          className="space-y-3 mb-8"
+          style={{ fontFamily: "'KaiTi', '標楷體', serif" }}
+        >
+          {applicationStudies.map(({ slug, title }, i) => (
+            <li key={slug} className="flex gap-3 leading-relaxed lg:leading-8 text-base lg:text-lg">
+              <span className="flex-none flex items-center justify-center w-6 h-6 lg:w-7 lg:h-7 rounded-full bg-emerald-600 text-white text-xs lg:text-sm font-semibold mt-0.5">
+                {i + 1}
+              </span>
+              <Link
+                href={`/research_result/research_solutions/${slug}`}
+                className="text-gray-700 hover:text-emerald-700 hover:underline transition-colors"
+              >
+                {title}
+              </Link>
             </li>
           ))}
         </ol>
